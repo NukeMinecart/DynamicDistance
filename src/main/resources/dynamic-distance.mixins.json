@@ -3,7 +3,7 @@
 	"package": "nukeminecart.distance.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"ViewDistanceSimpleOptionMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
