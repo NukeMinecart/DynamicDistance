@@ -1,3 +1,8 @@
 {
-  "options.renderDistance": "Max Render Distance"
+  "options.renderDistance": "Max Render Distance",
+  "text.autoconfig.dynamic-distance.option.isEnabled": "Is Enabled?",
+  "text.autoconfig.dynamic-distance.option.minimumRenderDistance": "Minimum Render Distance",
+  "text.autoconfig.dynamic-distance.option.isCreationMode.@Tooltip": "Should allow resource pack creation from commands?",
+  "text.autoconfig.dynamic-distance.option.isCreationMode": "Allow Resource Pack Creation?"
+
 }

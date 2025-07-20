@@ -1,14 +1,15 @@
 {
-	"required": true,
-	"package": "nukeminecart.distance.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"ViewDistanceSimpleOptionMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	},
-	"overwrites": {
-		"requireAnnotations": true
-	}
+  "required": true,
+  "package": "nukeminecart.distance.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "GameOptionsMixin",
+    "IntegratedServerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
 }

@@ -17,6 +17,9 @@
 	"entrypoints": {
 		"client": [
 			"nukeminecart.distance.DynamicRenderDistance"
+		],
+		"modmenu": [
+			"nukeminecart.distance.ModMenuIntegration"
 		]
 	},
 	"mixins": [
@@ -27,6 +30,7 @@
 		"minecraft": "~1.21.4",
 		"java": ">=21",
 		"fabric-api": "*",
-		"modmenu": "*"
+		"modmenu": "*",
+		"cloth-config": "*"
 	}
 }
