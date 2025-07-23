@@ -6,8 +6,11 @@ import net.fabricmc.api.ClientModInitializer;
 
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.resource.ResourceType;
 import net.minecraft.util.math.BlockPos;
+import nukeminecart.distance.resource.ResourceLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.mojang.brigadier.CommandDispatcher;
@@ -25,7 +28,7 @@ public class DynamicRenderDistance implements ClientModInitializer {
 	
 	private BlockPos lastPosition;
 	
-	private DistanceManager manager;
+	private static DistanceManager manager;
 
 	@Override
 	public void onInitializeClient() {
@@ -44,6 +47,12 @@ public class DynamicRenderDistance implements ClientModInitializer {
 			
             lastPosition = pos;
 		});
+
+		ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new ResourceLoader());
+	}
+	
+	public static DistanceManager getManager() {
+		return manager;
 	}
 
 	public static class ClientCustomCommand {
